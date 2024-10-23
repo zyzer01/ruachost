@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ProgressBarProviders from "@/components/progress-bar-provider";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,7 +37,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ProgressBarProviders>{children}</ProgressBarProviders>
+          <ProgressBarProviders>{children}
+            <Footer />
+          </ProgressBarProviders>
         </ThemeProvider>
       </body>
     </html>
