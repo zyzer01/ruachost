@@ -1,73 +1,62 @@
+'use client'
 import React from "react";
-import { Button } from "@/components/ui/button";
-
-const stats = [
-  {
-    value: "30%",
-    title: "Working Individuals",
-    desc: "We reached over 30 million users and are growing fast.",
-  },
-  {
-    value: "30%",
-    title: "Working Individuals",
-    desc: "We reached over 30 million users and are growing fast.",
-  },
-  {
-    value: "70%",
-    title: "Working Individuals",
-    desc: "We reached over 30 million users and are growing fast.",
-  },
-  {
-    value: "30%",
-    title: "Working Individuals",
-    desc: "We reached over 30 million users and are growing fast.",
-  },
-];
+import { Button } from "./ui/button";
+import CountUp from 'react-countup';
+import HeadingApart from "./ui/heading-apart";
 
 export default function StatSection() {
   return (
     <section>
-      <div className="px-8 py-24 mx-auto md:px-12 lg:px-24 max-w-7xl relative">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:items-center">
-          <div className="flex flex-col h-full justify-between gap-8">
-            <div className="text-center lg:text-left">
-              <p className="text-sm leading-normal font-bold uppercase text-accent-600">
-                Tagline
-              </p>
-              <h2 className="text-xl leading-tight tracking-tight sm:text-2xl md:text-3xl lg:text-4xl mt-4 font-semibold text-base-900 lg:text-balance">
-                Empower your developer with our unmatched value
-              </h2>
-              <p className="text-base leading-normal mt-4 text-muted-foreground font-medium">
-                Experience low fees, unwavering commitment, and massive earnings
-                with a service trusted by over 60 million users.
+      <div className="px-8 py-24 mx-auto md:px-12 lg:px-16 max-w-7xl relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+          <div className="flex justify-between rounded-3xl bg-muted flex-col lg:gap-12">
+            <div className="p-8 order-last border-t w-full border-muted-foreground/20">
+              <p className="text-4xl leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-6xl text-accent-700 font-medium">
+                <CountUp end={3389} enableScrollSpy scrollSpyOnce/>   
               </p>
             </div>
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-              <Button>Get started</Button>
-              <Button variant="link">Learn more</Button>
+            <div className="sm:shrink lg:flex-none p-8">
+              <h3 className="leading-normal sm:text-lg md:text-xl text-base-900 font-medium">
+                Active Customers
+              </h3>
+              <p className="leading-normal mt-2 text-base-500 font-medium">
+                We’re dedicated to delivering outstanding service and value.
+              </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-2">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="flex flex-col bg-muted p-8 rounded-lg"
-              >
-                <div className="flex gap-4 items-baseline">
-                  <h3 className="text-base leading-normal sm:text-lg md:text-xl text-chart-2 font-bold">
-                    {stat.value}
-                  </h3>
-                  <h3 className="text-base leading-normal sm:text-lg md:text-xl text-base-900 font-medium">
-                    {stat.title}
-                  </h3>
-                </div>
-                <p className="text-base leading-normal mt-2 text-muted-foreground font-medium">
-                  {stat.desc}
-                </p>
-              </div>
-            ))}
+          <div className="flex justify-between rounded-3xl bg-blue-600 flex-col lg:gap-28">
+            <div className="p-8 order-last border-t border-border/20 w-full">
+              <p className="text-4xl leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-6xl text-white font-medium">
+              
+              <CountUp end={7093} enableScrollSpy scrollSpyOnce/>
+              </p>
+            </div>
+            <div className="sm:shrink lg:flex-none p-8">
+              <h3 className="leading-normal sm:text-lg md:text-xl text-white font-medium">
+                Domains Managed
+              </h3>
+              <p className="leading-normal mt-2 text-white font-medium">
+                Reap the benefits with substantial returns.
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-between rounded-3xl bg-foreground flex-col lg:gap-44 text-background">
+            <div className="p-8 order-last border-t border-border/20 w-full">
+              <p className="text-4xl leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-6xl font-medium">
+              <CountUp end={10453} enableScrollSpy scrollSpyOnce/>
+              </p>
+            </div>
+            <div className="sm:shrink lg:flex-none p-8">
+              <h3 className="leading-normal sm:text-lg md:text-xl font-medium">
+              Websites Hosted
+              </h3>
+              <p className="leading-normal mt-2 font-medium">
+                Enjoy significant savings with our extremely low fee structure.
+              </p>
+            </div>
           </div>
         </div>
+        <HeadingApart title="Unmatched power with exclusive service." tagline="Power" buttonText="Get Started" href="/signup" />
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ export default function DomainSearch() {
     <div className="py-16 space-y-16 md:py-24 md:space-y-24">
       <div className="overflow-x-hidden">
         <div className="mx-auto px-4 md:px-8">
-          <div className="bg-muted border border-ring max-w-fit mx-auto p-8 md:px-16 md:py-12 relative space-y-6 after:block after:h-px after:w-screen after:absolute after:top-1/2 after:left-full after:-translate-y-1/2 after:bg-ring before:block before:h-px before:w-screen before:absolute before:top-1/2 before:right-full before:-translate-y-1/2 before:bg-ring">
+          <div className="bg-muted border border-border max-w-fit mx-auto p-8 md:px-16 md:py-12 relative space-y-6 after:block after:h-px after:w-screen after:absolute after:top-1/2 after:left-full after:-translate-y-1/2 after:bg-border before:block before:h-px before:w-screen before:absolute before:top-1/2 before:right-full before:-translate-y-1/2 before:bg-border">
             <h2 className="text-md lg:text-3xl font-semibold">
               Search for a domain or transfer your own
             </h2>
